@@ -1,8 +1,5 @@
 FROM node:20-alpine
 
-# Needed for bcrypt
-# RUN apk --no-cache add --virtual builds-deps build-base python2
-
 # Create app directory
 RUN mkdir -p /app && chown node:node /app
 USER node
@@ -13,8 +10,8 @@ COPY --chown=node:node package*.json ./
 RUN npm ci --omit=dev
 
 # Bundle app source
-COPY --chown=node:node src src
+COPY --chown=node:node index.js index.js
 
 # Exports
 EXPOSE 8080
-CMD [ "node", "src/index.js" ]
+CMD [ "node", "index.js" ]
