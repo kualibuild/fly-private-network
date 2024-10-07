@@ -7,7 +7,7 @@ import axios from 'axios'
 
 const { PORT = '8080', FLYCAST_ORIGIN } = process.env
 const port = parseInt(PORT, 10)
-const PARALLEL_CALLS = 200
+const PARALLEL_CALLS = 1000
 const JITTER = 100
 const DELAY = 1000
 
