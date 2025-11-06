@@ -1,3 +1,4 @@
+/* Copyright © 2024-2025 Kuali, Inc. - All Rights Reserved */
 import process from 'node:process'
 import http from 'node:http'
 import events from 'node:events'
